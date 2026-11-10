@@ -32,7 +32,7 @@ This project documents 19 multiplayer maps from the original **Titanfall** that 
 
 ## Game modes
 
-The IDs are the names used in the playlist configuration. The names after the dash are player-facing mode names.
+The IDs are the names used in the playlist configuration. The names after are ingame mode names.
 
 | Playlist ID | Player-facing name |
 |---|---|
