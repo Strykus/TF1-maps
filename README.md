@@ -1,7 +1,7 @@
 <h1 align="center">TF1 Maps</h1>
 <h3 align="center">Titanfall 1 maps not included in Titanfall 2</h3>
 
-This project documents 19 multiplayer maps from the original **Titanfall** that are not included in **Titanfall 2**. Each map has its own README under `maps/`.
+This project documents 19 multiplayer maps(10 Currently) from the original **Titanfall** that are not included in **Titanfall 2**. Each map has its own README under `mapsreadme/`.
 
 <img width="1920" height="1080" alt="Без имени" src="https://github.com/user-attachments/assets/8b11dca8-8ee6-4c00-ae11-db909ec7afc9" />
 
@@ -10,28 +10,28 @@ This project documents 19 multiplayer maps from the original **Titanfall** that 
 
 ### Base game
 
-- [Airbase](maps/airbase/README.md)
-- [Boneyard](maps/boneyard/README.md)
-- [Corporate](maps/corporate/README.md)
-- [Demeter](maps/demeter/README.md)
-- [Fracture](maps/fracture/README.md)
-- [Lagoon](maps/lagoon/README.md)
-- [Nexus](maps/nexus/README.md)
-- [Outpost 207](maps/outpost-207/README.md)
-- [Overlook](maps/overlook/README.md)
-- [Training Ground](maps/training-ground/README.md)
+- [Airbase](mapsreadme/mp_tf1_airbase.md)
+- Boneyard
+- Corporate
+- Demeter
+- [Fracture](mapsreadme/mp_tf1_fracture.md)
+- [Lagoon](mapsreadme/mp_tf1_lagoon.md)
+- [Nexus](mapsreadme/mp_tf1_nexus.md)
+- [Outpost 207](mapsreadme/mp_tf1_outpost_207.md)
+- [Overlook](mapsreadme/mp_tf1_overlook.md)
+- Training Ground
 
 ### DLC maps
 
-- [Backwater](maps/backwater/README.md)
-- [Dig Site](maps/dig-site/README.md)
-- [Export](maps/export/README.md)
-- [Haven](maps/haven/README.md)
-- [Runoff](maps/runoff/README.md)
-- [Sandtrap](maps/sandtrap/README.md)
-- [Smuggler's Cove](maps/smugglers-cove/README.md)
-- [Swampland](maps/swampland/README.md)
-- [Zone 18](maps/zone-18/README.md)
+- Backwater
+- Dig Site
+- [Export](mapsreadme/mp_tf1_switchback.md)
+- Haven
+- [Runoff](mapsreadme/mp_tf1_runoff.md)
+- [Sandtrap](mapsreadme/mp_tf1_sandtrap.md)
+- Smuggler's Cove
+- [Swampland](mapsreadme/mp_tf1_swampland.md)
+- Zone 18
 
 
 ## Game modes
