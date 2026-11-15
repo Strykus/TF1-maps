@@ -1,0 +1,11 @@
+global function TF1Lagoon_Init
+
+void function TF1Lagoon_Init()
+{
+	AddCallback_OnCustomGamemodesInit( TF1Lagoon_AddMap )
+}
+
+void function TF1Lagoon_AddMap()
+{
+	AddPrivateMatchMap( "mp_tf1_lagoon" )
+}

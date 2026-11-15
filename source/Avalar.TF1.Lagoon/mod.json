@@ -1,0 +1,85 @@
+{
+  "Name": "Avalar.TF1.Lagoon",
+  "Version": "1.0.4",
+  "LoadPriority": 200,
+  "RequiredOnClient": true,
+  "Description": "Titanfall 1 port of the map Lagoon in Titanfall 2",
+  "Scripts": [
+    {
+      "Path": "lobby/sh_mp_tf1_lagoon.gnut",
+      "RunOn": "( CLIENT || SERVER ) && MP",
+      "ClientCallback": {
+        "Before": "TF1Lagoon_Init"
+      },
+      "ServerCallback": {
+        "Before": "TF1Lagoon_Init"
+      }
+    },
+    {
+      "Path": "cl_mp_tf1_lagoon_lighting.nut",
+      "RunOn": "CLIENT && MP",
+      "ClientCallback": {
+        "After": "TF1Port_mp_tf1_lagoon_Init",
+        "Destroy": "TF1Port_mp_tf1_lagoon_Shutdown"
+      }
+    },
+    {
+      "Path": "sv_mp_tf1_lagoon_lifecycle.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "After": "TF1Port_mp_tf1_lagoon_ServerInit"
+      }
+    },
+    {
+      "Path": "sv_mp_tf1_lagoon_evac.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "After": "TF1Evac_mp_tf1_lagoon_Init"
+      }
+    },
+    {
+      "Path": "sv_mp_tf1_lagoon_scenery.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "Before": "TF1Port_mp_tf1_lagoon_Scenery_Precache",
+        "After": "TF1Port_mp_tf1_lagoon_Scenery_Init"
+      }
+    },
+    {
+      "Path": "sv_mp_tf1_lagoon_fastball.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "After": "TF1Port_mp_tf1_lagoon_Fastball_Init"
+      }
+    },
+    {
+      "Path": "sv_mp_tf1_lagoon_static_models.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "Before": "TF1Port_mp_tf1_lagoon_StaticModels_Precache"
+      }
+    },
+    {
+      "Path": "cl_lagoon_native_soundscape.nut",
+      "RunOn": "CLIENT && MP",
+      "ClientCallback": {
+        "After": "LagoonNativeAudio_Init",
+        "Destroy": "LagoonNativeAudio_Shutdown"
+      }
+    },
+    {
+      "Path": "cl_mp_tf1_lagoon_audio.nut",
+      "RunOn": "CLIENT && MP",
+      "ClientCallback": {
+        "After": "TF1Port_mp_tf1_lagoon_AudioInit",
+        "Destroy": "TF1Port_mp_tf1_lagoon_AudioShutdown"
+      }
+    }
+  ],
+  "Localisation": [
+    "resource/names_mp_tf1_lagoon_%language%.txt"
+  ],
+  "PluginDependencies": [
+    "TF1AudioRuntime"
+  ]
+}
