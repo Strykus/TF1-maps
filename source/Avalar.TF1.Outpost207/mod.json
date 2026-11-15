@@ -1,0 +1,88 @@
+{
+  "Name": "Avalar.TF1.Outpost207",
+  "Version": "1.0.0",
+  "LoadPriority": 202,
+  "RequiredOnClient": true,
+  "Description": "Titanfall 1 port of the map Outpost 207 in Titanfall 2",
+  "Scripts": [
+    {
+      "Path": "lobby/sh_mp_tf1_outpost_207.gnut",
+      "RunOn": "( CLIENT || SERVER ) && MP",
+      "ClientCallback": {
+        "Before": "TF1Outpost207_Init"
+      },
+      "ServerCallback": {
+        "Before": "TF1Outpost207_Init"
+      }
+    },
+    {
+      "Path": "cl_mp_tf1_outpost_207_lighting.nut",
+      "RunOn": "CLIENT && MP",
+      "ClientCallback": {
+        "After": "TF1Port_mp_tf1_outpost_207_Init",
+        "Destroy": "TF1Port_mp_tf1_outpost_207_Shutdown"
+      }
+    },
+    {
+      "Path": "sv_tf1_outpost_listen_models.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "Before": "TF1IntroModels_Precache"
+      }
+    },
+    {
+      "Path": "sv_tf1_outpost_editor_environment.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "After": "TF1OutpostEditor_EnvironmentInit"
+      }
+    },
+    {
+      "Path": "sv_mp_tf1_outpost_207_evac.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "After": "TF1Evac_mp_tf1_outpost_207_Init"
+      }
+    },
+    {
+      "Path": "sv_mp_tf1_outpost_207_turrets.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "Before": "TF1Port_mp_tf1_outpost_207_Turrets_Precache",
+        "After": "TF1Port_mp_tf1_outpost_207_Turrets_Init"
+      }
+    },
+    {
+      "Path": "sv_tf1_outpost_emplacements.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "Before": "TF1Outpost_EmplacementsPrecache",
+        "After": "TF1Outpost_EmplacementsInit"
+      }
+    },
+    {
+      "Path": "sv_tf1_outpost_ctf_flags.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "After": "TF1Outpost_CTFFlagsInit"
+      }
+    },
+    {
+      "Path": "sv_tf1_outpost_fastball.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "After": "TF1Outpost_FastballInit"
+      }
+    },
+    {
+      "Path": "cl_tf1_outpost_isolated_panel.nut",
+      "RunOn": "CLIENT && MP",
+      "ClientCallback": {
+        "After": "TF1OutpostPanel_Init"
+      }
+    }
+  ],
+  "Localisation": [
+    "resource/names_mp_tf1_outpost_207_%language%.txt"
+  ]
+}

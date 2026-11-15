@@ -1,0 +1,145 @@
+{
+  "Name": "Avalar.TF1.Runoff",
+  "Version": "1.0.0",
+  "LoadPriority": 200,
+  "RequiredOnClient": true,
+  "Description": "Titanfall 1 port of the map Runoff in Titanfall 2",
+  "Scripts": [
+    {
+      "Path": "lobby/sh_mp_tf1_runoff.gnut",
+      "RunOn": "( CLIENT || SERVER ) && MP",
+      "ClientCallback": {
+        "Before": "TF1Runoff_Init"
+      },
+      "ServerCallback": {
+        "Before": "TF1Runoff_Init"
+      }
+    },
+    {
+      "Path": "sv_mp_tf1_runoff_ctf_flags.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "After": "TF1Runoff_CTFFlags_Init"
+      }
+    },
+    {
+      "Path": "cl_tf1_runoff_atmosphere.nut",
+      "RunOn": "CLIENT && MP",
+      "ClientCallback": {
+        "After": "TF1_Runoff_Atmosphere_ClientInit"
+      }
+    },
+    {
+      "Path": "sv_tf1_runoff_atmosphere.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "After": "TF1_Runoff_Atmosphere_ServerInit"
+      }
+    },
+    {
+      "Path": "cl_runoff_tube_effects.nut",
+      "RunOn": "CLIENT && MP",
+      "ClientCallback": {
+        "After": "RunoffTubeEffects_Init"
+      }
+    },
+    {
+      "Path": "cl_runoff_minimap.nut",
+      "RunOn": "CLIENT && MP",
+      "ClientCallback": {
+        "After": "RunoffMinimap_Init"
+      }
+    },
+    {
+      "Path": "sv_runoff_titan_landing.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "After": "TF1Port_mp_tf1_runoff_TitanLandingInit"
+      }
+    },
+    {
+      "Path": "sv_runoff_safe_titanfall.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "After": "RunoffSafeTitanfall_Init"
+      }
+    },
+    {
+      "Path": "cl_runoff_soft_lighting.nut",
+      "RunOn": "CLIENT && MP",
+      "ClientCallback": {
+        "After": "RunoffSoftLighting_Init",
+        "Destroy": "RunoffSoftLighting_Shutdown"
+      }
+    },
+    {
+      "Path": "cl_runoff_ground_fog.nut",
+      "RunOn": "CLIENT && MP",
+      "ClientCallback": {
+        "After": "RunoffGroundFog_Init"
+      }
+    },
+    {
+      "Path": "cl_runoff_lamp_glows.nut",
+      "RunOn": "CLIENT && MP",
+      "ClientCallback": {
+        "After": "RunoffLampGlows_Init"
+      }
+    },
+    {
+      "Path": "sh_runoff_reapers.gnut",
+      "RunOn": "SERVER || CLIENT"
+    },
+    {
+      "Path": "sv_runoff_reapers.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "After": "RunoffReapers_Init"
+      }
+    },
+    {
+      "Path": "cl_runoff_native_pipe_audio.nut",
+      "RunOn": "CLIENT && MP",
+      "ClientCallback": {
+        "Before": "RunoffNativePipeAudio_Precache",
+        "After": "RunoffNativePipeAudio_Init",
+        "Destroy": "RunoffNativePipeAudio_Shutdown"
+      }
+    },
+    {
+      "Path": "ui_runoff_connect.nut",
+      "RunOn": "UI",
+      "UICallback": {
+        "After": "RunoffClientConnect_Init"
+      }
+    },
+    {
+      "Path": "sv_mp_tf1_runoff_fastball.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "After": "TF1Port_mp_tf1_runoff_Fastball_Init"
+      }
+    },
+    {
+      "Path": "sv_mp_tf1_runoff_evac.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "After": "TF1Evac_mp_tf1_runoff_Init"
+      }
+    }
+  ],
+  "ConVars": [
+    {
+      "Name": "runoff_reapers_enabled",
+      "DefaultValue": "0",
+      "Flags": "REPLICATED"
+    },
+    {
+      "Name": "runoff_server_address",
+      "DefaultValue": "127.0.0.1:37191"
+    }
+  ],
+  "Localisation": [
+    "resource/tf1_runoff_names_%language%.txt"
+  ]
+}

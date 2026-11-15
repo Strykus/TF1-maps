@@ -1,0 +1,63 @@
+{
+  "Name": "Avalar.TF1.Overlook",
+  "Version": "1.0.0",
+  "LoadPriority": 200,
+  "RequiredOnClient": true,
+  "Description": "Titanfall 1 port of the map Overlook in Titanfall 2",
+  "Scripts": [
+    {
+      "Path": "ui_mp_tf1_overlook_register.nut",
+      "RunOn": "( CLIENT || SERVER ) && MP",
+      "ClientCallback": {
+        "Before": "TF1Port_mp_tf1_overlook_Register"
+      },
+      "ServerCallback": {
+        "Before": "TF1Port_mp_tf1_overlook_Register"
+      }
+    },
+    {
+      "Path": "cl_mp_tf1_overlook_lighting.nut",
+      "RunOn": "CLIENT && MP",
+      "ClientCallback": {
+        "After": "TF1Port_mp_tf1_overlook_Init",
+        "Destroy": "TF1Port_mp_tf1_overlook_Shutdown"
+      }
+    },
+    {
+      "Path": "cl_mp_tf1_overlook_miles.nut",
+      "RunOn": "CLIENT && MP",
+      "ClientCallback": {
+        "After": "TF1Port_mp_tf1_overlook_Miles_Init",
+        "Destroy": "TF1Port_mp_tf1_overlook_Miles_Shutdown"
+      }
+    },
+    {
+      "Path": "sv_mp_tf1_overlook_lifecycle.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "After": "TF1Port_mp_tf1_overlook_ServerInit"
+      }
+    },
+    {
+      "Path": "sv_mp_tf1_overlook_dogfight.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "After": "TF1OverlookDogfight_Init"
+      }
+    },
+    {
+      "Path": "sv_mp_tf1_overlook_evac.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "After": "TF1Evac_mp_tf1_overlook_Init"
+      }
+    },
+    {
+      "RunOn": "SERVER && MP",
+      "Path": "sv_mp_tf1_overlook_titan_respawn.nut"
+    }
+  ],
+  "Localisation": [
+    "resource/names_mp_tf1_overlook_%language%.txt"
+  ]
+}

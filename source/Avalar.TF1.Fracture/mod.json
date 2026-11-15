@@ -1,0 +1,109 @@
+{
+  "Name": "Avalar.TF1.Fracture",
+  "Version": "1.0.0",
+  "LoadPriority": 200,
+  "RequiredOnClient": true,
+  "Description": "Titanfall 1 port of the map Fracture in Titanfall 2",
+  "Scripts": [
+    {
+      "Path": "ui_mp_tf1_fracture_register.nut",
+      "RunOn": "( CLIENT || SERVER ) && MP",
+      "ClientCallback": {
+        "Before": "TF1Port_mp_tf1_fracture_Register"
+      },
+      "ServerCallback": {
+        "Before": "TF1Port_mp_tf1_fracture_Register"
+      }
+    },
+    {
+      "Path": "cl_mp_tf1_fracture_lighting.nut",
+      "RunOn": "CLIENT && MP",
+      "ClientCallback": {
+        "After": "TF1Port_mp_tf1_fracture_Init",
+        "Destroy": "TF1Port_mp_tf1_fracture_Shutdown"
+      }
+    },
+    {
+      "Path": "sv_mp_tf1_fracture_turrets.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "Before": "TF1Port_mp_tf1_fracture_Turrets_Precache",
+        "After": "TF1Port_mp_tf1_fracture_Turrets_Init"
+      }
+    },
+    {
+      "Path": "cl_mp_tf1_fracture_miles.nut",
+      "RunOn": "CLIENT && MP",
+      "ClientCallback": {
+        "After": "TF1Port_mp_tf1_fracture_Miles_Init",
+        "Destroy": "TF1Port_mp_tf1_fracture_Miles_Shutdown"
+      }
+    },
+    {
+      "Path": "sv_mp_tf1_fracture_lifecycle.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "After": "TF1Port_mp_tf1_fracture_ServerInit"
+      }
+    },
+    {
+      "Path": "cl_mp_tf1_fracture_sky.nut",
+      "RunOn": "CLIENT && MP",
+      "ClientCallback": {
+        "Before": "TF1FractureSky_Precache",
+        "After": "TF1FractureSky_Init",
+        "Destroy": "TF1FractureSky_Shutdown"
+      }
+    },
+    {
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "Before": "TF1FractureSky_ServerPrecache"
+      },
+      "Path": "sv_mp_tf1_fracture_sky.nut"
+    },
+    {
+      "RunOn": "SERVER && MP",
+      "Path": "sv_mp_tf1_fracture_machinery.nut",
+      "ServerCallback": {
+        "After": "TF1FractureMachinery_Init",
+        "Before": "TF1FractureMachinery_Precache"
+      }
+    },
+    {
+      "ServerCallback": {
+        "Before": "TF1FractureQuake_Register"
+      },
+      "ClientCallback": {
+        "Before": "TF1FractureQuake_Register"
+      },
+      "Path": "sh_mp_tf1_fracture_quake.nut",
+      "RunOn": "( CLIENT || SERVER ) && MP"
+    },
+    {
+      "ClientCallback": {
+        "Before": "TF1FractureQuake_Precache",
+        "Destroy": "TF1FractureQuake_Shutdown"
+      },
+      "Path": "cl_mp_tf1_fracture_quake.nut",
+      "RunOn": "CLIENT && MP"
+    },
+    {
+      "Path": "sv_mp_tf1_fracture_fastball.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "After": "TF1FractureFastball_Init"
+      }
+    },
+    {
+      "Path": "sv_mp_tf1_fracture_evac.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "After": "TF1Evac_mp_tf1_fracture_Init"
+      }
+    }
+  ],
+  "Localisation": [
+    "resource/names_mp_tf1_fracture_%language%.txt"
+  ]
+}

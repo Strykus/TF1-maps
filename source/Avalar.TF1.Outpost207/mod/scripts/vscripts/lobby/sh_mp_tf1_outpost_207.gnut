@@ -1,0 +1,11 @@
+global function TF1Outpost207_Init
+
+void function TF1Outpost207_Init()
+{
+	AddCallback_OnCustomGamemodesInit( TF1Outpost207_AddMap )
+}
+
+void function TF1Outpost207_AddMap()
+{
+	AddPrivateMatchMap( "mp_tf1_outpost_207" )
+}

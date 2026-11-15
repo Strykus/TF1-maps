@@ -1,0 +1,92 @@
+{
+  "Name": "Avalar.TF1.Export",
+  "Version": "1.0.0",
+  "LoadPriority": 200,
+  "Dependencies": {
+    "TF1_NS_CUSTOM": "Northstar.Custom"
+  },
+  "RequiredOnClient": true,
+  "Description": "Titanfall 1 port of the map Export in Titanfall 2",
+  "Scripts": [
+    {
+      "Path": "lobby/sh_mp_tf1_switchback.gnut",
+      "RunOn": "( CLIENT || SERVER ) && MP",
+      "ClientCallback": {
+        "Before": "TF1Export_Init"
+      },
+      "ServerCallback": {
+        "Before": "TF1Export_Init"
+      }
+    },
+    {
+      "Path": "sv_mp_tf1_switchback_ctf_flags.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "After": "TF1Export_CTFFlags_Init"
+      }
+    },
+    {
+      "Path": "cl_mp_tf1_switchback_lighting.nut",
+      "RunOn": "CLIENT && MP",
+      "ClientCallback": {
+        "After": "TF1Port_mp_tf1_switchback_Init",
+        "Destroy": "TF1Port_mp_tf1_switchback_Shutdown"
+      }
+    },
+    {
+      "Path": "sv_mp_tf1_switchback_scripted_props.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "After": "TF1Port_mp_tf1_switchback_ScriptedProps_ServerInit"
+      }
+    },
+    {
+      "Path": "cl_mp_tf1_switchback_scripted_props.nut",
+      "RunOn": "CLIENT && MP",
+      "ClientCallback": {
+        "Before": "TF1Port_mp_tf1_switchback_ScriptedProps_Precache",
+        "After": "TF1Port_mp_tf1_switchback_ScriptedProps_Init",
+        "Destroy": "TF1Port_mp_tf1_switchback_ScriptedProps_Shutdown"
+      }
+    },
+    {
+      "Path": "sv_mp_tf1_switchback_lifecycle.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "After": "TF1Port_mp_tf1_switchback_ServerInit"
+      }
+    },
+    {
+      "Path": "sv_mp_tf1_switchback_electrical.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "Before": "TF1ExportElectric_Precache",
+        "After": "TF1ExportElectric_Init"
+      }
+    },
+    {
+      "Path": "sv_mp_tf1_switchback_fastball.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "After": "TF1Port_mp_tf1_switchback_Fastball_Init"
+      }
+    },
+    {
+      "Path": "sv_mp_tf1_switchback_modes.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "After": "TF1Port_mp_tf1_switchback_Modes_Init"
+      }
+    },
+    {
+      "Path": "sv_mp_tf1_switchback_evac.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "After": "TF1Evac_mp_tf1_switchback_Init"
+      }
+    }
+  ],
+  "Localisation": [
+    "resource/names_mp_tf1_switchback_%language%.txt"
+  ]
+}

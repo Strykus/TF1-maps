@@ -1,0 +1,11 @@
+global function TF1Nexus_Init
+
+void function TF1Nexus_Init()
+{
+	AddCallback_OnCustomGamemodesInit( TF1Nexus_AddMap )
+}
+
+void function TF1Nexus_AddMap()
+{
+	AddPrivateMatchMap( "mp_tf1_nexus" )
+}

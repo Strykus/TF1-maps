@@ -1,0 +1,44 @@
+{
+  "Name": "Avalar.TF1.Sandtrap",
+  "Version": "1.0.0",
+  "LoadPriority": 200,
+  "RequiredOnClient": true,
+  "Description": "Titanfall 1 port of the map Sandtrap in Titanfall 2",
+  "Scripts": [
+    {
+      "Path": "ui_mp_tf1_sandtrap_register.nut",
+      "RunOn": "( CLIENT || SERVER ) && MP",
+      "ClientCallback": {
+        "Before": "TF1Port_mp_tf1_sandtrap_Register"
+      },
+      "ServerCallback": {
+        "Before": "TF1Port_mp_tf1_sandtrap_Register"
+      }
+    },
+    {
+      "Path": "cl_mp_tf1_sandtrap_lighting.nut",
+      "RunOn": "CLIENT && MP",
+      "ClientCallback": {
+        "After": "TF1Port_mp_tf1_sandtrap_Init",
+        "Destroy": "TF1Port_mp_tf1_sandtrap_Shutdown"
+      }
+    },
+    {
+      "Path": "sv_mp_tf1_sandtrap_lifecycle.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "After": "TF1Port_mp_tf1_sandtrap_ServerInit"
+      }
+    },
+    {
+      "Path": "sv_mp_tf1_sandtrap_fastball.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "After": "TF1SandtrapFastball_Init"
+      }
+    }
+  ],
+  "Localisation": [
+    "resource/names_mp_tf1_sandtrap_%language%.txt"
+  ]
+}

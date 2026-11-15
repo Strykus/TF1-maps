@@ -1,0 +1,11 @@
+global function TF1Export_Init
+
+void function TF1Export_Init()
+{
+	AddCallback_OnCustomGamemodesInit( TF1Export_AddMap )
+}
+
+void function TF1Export_AddMap()
+{
+	AddPrivateMatchMap( "mp_tf1_switchback" )
+}

@@ -1,0 +1,11 @@
+global function TF1Swampland_Init
+
+void function TF1Swampland_Init()
+{
+	AddCallback_OnCustomGamemodesInit( TF1Swampland_AddMap )
+}
+
+void function TF1Swampland_AddMap()
+{
+	AddPrivateMatchMap( "mp_tf1_swampland" )
+}

@@ -1,0 +1,11 @@
+global function TF1Runoff_Init
+
+void function TF1Runoff_Init()
+{
+	AddCallback_OnCustomGamemodesInit( TF1Runoff_AddMap )
+}
+
+void function TF1Runoff_AddMap()
+{
+	AddPrivateMatchMap( "mp_tf1_runoff" )
+}

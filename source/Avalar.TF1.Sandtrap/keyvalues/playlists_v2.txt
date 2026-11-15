@@ -1,0 +1,102 @@
+playlists
+{
+ Playlists
+ {
+  fastball
+  {
+   gamemodes
+   {
+   fastball
+   {
+    maps
+    {
+     mp_tf1_sandtrap 1
+    }
+   }
+   }
+  }
+  private_match
+  {
+   gamemodes
+   {
+   fastball
+   {
+    maps
+    {
+     mp_tf1_sandtrap 1
+    }
+   }
+   tdm
+   {
+    maps
+    {
+     mp_tf1_sandtrap 1
+    }
+   }
+   aitdm
+   {
+    maps
+    {
+     mp_tf1_sandtrap 1
+    }
+   }
+   cp
+   {
+    maps
+    {
+     mp_tf1_sandtrap 1
+    }
+   }
+   at
+   {
+    maps
+    {
+     mp_tf1_sandtrap 1
+    }
+   }
+   ctf
+   {
+    maps
+    {
+     mp_tf1_sandtrap 1
+    }
+   }
+   lts
+   {
+    maps
+    {
+     mp_tf1_sandtrap 1
+    }
+   }
+   ps
+   {
+    maps
+    {
+     mp_tf1_sandtrap 1
+    }
+   }
+   speedball
+   {
+    maps
+    {
+     mp_tf1_sandtrap 1
+    }
+   }
+   mfd
+   {
+    maps
+    {
+     mp_tf1_sandtrap 1
+    }
+   }
+   ttdm
+   {
+    maps
+    {
+     mp_tf1_sandtrap 1
+    }
+   }
+   }
+  }
+ }
+}

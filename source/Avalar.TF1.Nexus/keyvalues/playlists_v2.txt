@@ -1,0 +1,95 @@
+playlists
+{
+ Playlists
+ {
+  private_match
+  {
+   gamemodes
+   {
+   tdm
+   {
+    maps
+    {
+     mp_tf1_nexus 1
+    }
+   }
+   aitdm
+   {
+    maps
+    {
+     mp_tf1_nexus 1
+    }
+   }
+   cp
+   {
+    maps
+    {
+     mp_tf1_nexus 1
+    }
+   }
+   at
+   {
+    maps
+    {
+     mp_tf1_nexus 1
+    }
+   }
+   ctf
+   {
+    maps
+    {
+     mp_tf1_nexus 1
+    }
+   }
+   lts
+   {
+    maps
+    {
+     mp_tf1_nexus 1
+    }
+   }
+   ps
+   {
+    maps
+    {
+     mp_tf1_nexus 1
+    }
+   }
+   speedball
+   {
+    maps
+    {
+     mp_tf1_nexus 1
+    }
+   }
+   mfd
+   {
+    maps
+    {
+     mp_tf1_nexus 1
+    }
+   }
+   ttdm
+   {
+    maps
+    {
+     mp_tf1_nexus 1
+    }
+   }
+   }
+  }
+  fastball
+  {
+   gamemodes
+   {
+    fastball
+    {
+     maps
+     {
+      mp_tf1_nexus 1
+     }
+    }
+   }
+  }
+ }
+}

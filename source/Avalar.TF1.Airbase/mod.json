@@ -1,0 +1,116 @@
+{
+  "Name": "Avalar.TF1.Airbase",
+  "Version": "1.0.0",
+  "LoadPriority": 200,
+  "RequiredOnClient": true,
+  "Description": "Titanfall 1 port of the map Airbase in Titanfall 2",
+  "Scripts": [
+    {
+      "Path": "ui_mp_tf1_airbase_register.nut",
+      "RunOn": "( CLIENT || SERVER ) && MP",
+      "ClientCallback": {
+        "Before": "TF1Port_mp_tf1_airbase_Register"
+      },
+      "ServerCallback": {
+        "Before": "TF1Port_mp_tf1_airbase_Register"
+      }
+    },
+    {
+      "Path": "cl_mp_tf1_airbase_lighting.nut",
+      "RunOn": "CLIENT && MP",
+      "ClientCallback": {
+        "After": "TF1Port_mp_tf1_airbase_Init",
+        "Destroy": "TF1Port_mp_tf1_airbase_Shutdown"
+      }
+    },
+    {
+      "Path": "sv_mp_tf1_airbase_turrets.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "Before": "TF1Port_mp_tf1_airbase_Turrets_Precache",
+        "After": "TF1Port_mp_tf1_airbase_Turrets_Init"
+      }
+    },
+    {
+      "Path": "cl_mp_tf1_airbase_miles.nut",
+      "RunOn": "CLIENT && MP",
+      "ClientCallback": {
+        "After": "TF1Port_mp_tf1_airbase_Miles_Init",
+        "Destroy": "TF1Port_mp_tf1_airbase_Miles_Shutdown"
+      }
+    },
+    {
+      "Path": "sv_mp_tf1_airbase_lifecycle.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "After": "TF1Port_mp_tf1_airbase_ServerInit"
+      }
+    },
+    {
+      "Path": "cl_mp_tf1_airbase_tower.nut",
+      "RunOn": "CLIENT && MP",
+      "ClientCallback": {
+        "Before": "TF1AirbaseTower_ClientPrecache",
+        "After": "TF1AirbaseTower_ClientInit",
+        "Destroy": "TF1AirbaseTower_ClientShutdown"
+      }
+    },
+    {
+      "Path": "sv_mp_tf1_airbase_tower.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "Before": "TF1AirbaseTower_ServerPrecache",
+        "After": "TF1AirbaseTower_ServerInit"
+      }
+    },
+    {
+      "Path": "sv_mp_tf1_airbase_fastball.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "After": "TF1AirbaseFastball_Init"
+      }
+    },
+    {
+      "Path": "cl_mp_tf1_airbase_static_sky.nut",
+      "RunOn": "CLIENT && MP",
+      "ClientCallback": {
+        "Before": "TF1AirbaseStaticSky_Precache",
+        "After": "TF1AirbaseStaticSky_Init",
+        "Destroy": "TF1AirbaseStaticSky_Shutdown"
+      }
+    },
+    {
+      "Path": "sv_mp_tf1_airbase_static_sky.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "Before": "TF1AirbaseStaticSky_ServerPrecache"
+      }
+    },
+    {
+      "Path": "sv_mp_tf1_airbase_evac.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "After": "TF1Evac_mp_tf1_airbase_Init"
+      }
+    },
+    {
+      "Path": "cl_mp_tf1_airbase_forklift.nut",
+      "RunOn": "CLIENT && MP",
+      "ClientCallback": {
+        "Before": "TF1AirbaseForklift_Precache",
+        "After": "TF1AirbaseForklift_Init",
+        "Destroy": "TF1AirbaseForklift_Shutdown"
+      }
+    },
+    {
+      "ServerCallback": {
+        "Before": "TF1AirbaseForklift_ServerPrecache"
+      },
+      "RunOn": "SERVER && MP",
+      "Path": "sv_mp_tf1_airbase_forklift.nut"
+    }
+  ],
+  "Localisation": [
+    "resource/names_mp_tf1_airbase_%language%.txt"
+  ]
+}

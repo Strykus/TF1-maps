@@ -1,0 +1,102 @@
+{
+  "Name": "Avalar.TF1.Swampland",
+  "Version": "1.0.0",
+  "LoadPriority": 201,
+  "RequiredOnClient": true,
+  "Description": "Titanfall 1 port of the map Swampland in Titanfall 2",
+  "Scripts": [
+    {
+      "Path": "lobby/sh_mp_tf1_swampland.gnut",
+      "RunOn": "( CLIENT || SERVER ) && MP",
+      "ClientCallback": {
+        "Before": "TF1Swampland_Init"
+      },
+      "ServerCallback": {
+        "Before": "TF1Swampland_Init"
+      }
+    },
+    {
+      "Path": "cl_mp_tf1_swampland_lighting.nut",
+      "RunOn": "CLIENT && MP",
+      "ClientCallback": {
+        "After": "TF1Port_mp_tf1_swampland_Init",
+        "Destroy": "TF1Port_mp_tf1_swampland_Shutdown"
+      }
+    },
+    {
+      "Path": "sv_mp_tf1_swampland_lifecycle.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "After": "TF1Port_mp_tf1_swampland_ServerInit"
+      }
+    },
+    {
+      "Path": "sv_mp_tf1_swampland_evac.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "After": "TF1Evac_mp_tf1_swampland_Init"
+      }
+    },
+    {
+      "Path": "cl_mp_tf1_swampland_ambient.nut",
+      "RunOn": "CLIENT && MP",
+      "ClientCallback": {
+        "Before": "TF1SwampAmbient_ClientPrecache",
+        "After": "TF1SwampAmbient_ClientInit",
+        "Destroy": "TF1SwampAmbient_ClientShutdown"
+      }
+    },
+    {
+      "Path": "sv_mp_tf1_swampland_ambient.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "Before": "TF1SwampAmbient_ServerPrecache",
+        "After": "TF1SwampAmbient_ServerInit"
+      }
+    },
+    {
+      "Path": "sv_mp_tf1_swampland_scenes.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "Before": "TF1SwampScenes_Precache",
+        "After": "TF1SwampScenes_Init"
+      }
+    },
+    {
+      "Path": "sh_mp_tf1_swampland_scenes.nut",
+      "RunOn": "(SERVER || CLIENT) && MP",
+      "ServerCallback": {
+        "Before": "TF1SwampScenes_RemoteInit"
+      },
+      "ClientCallback": {
+        "Before": "TF1SwampScenes_RemoteInit"
+      }
+    },
+    {
+      "Path": "cl_mp_tf1_swampland_scenes.nut",
+      "RunOn": "CLIENT && MP",
+      "ClientCallback": {
+        "Before": "TF1SwampScenes_ClientPrecache",
+        "After": "TF1SwampScenes_ClientInit",
+        "Destroy": "TF1SwampScenes_ClientShutdown"
+      }
+    },
+    {
+      "Path": "sv_mp_tf1_swampland_fastball.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "After": "TF1SwampFastball_Init"
+      }
+    },
+    {
+      "Path": "sv_mp_tf1_swampland_ctf_flags.nut",
+      "RunOn": "SERVER && MP",
+      "ServerCallback": {
+        "After": "TF1Swampland_CTFFlags_Init"
+      }
+    }
+  ],
+  "Localisation": [
+    "resource/names_mp_tf1_swampland_%language%.txt"
+  ]
+}

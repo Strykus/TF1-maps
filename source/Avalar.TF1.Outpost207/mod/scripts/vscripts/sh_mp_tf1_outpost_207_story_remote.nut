@@ -1,0 +1,17 @@
+global function TF1Port_mp_tf1_outpost_207_StoryRemote_Init
+
+void function TF1Port_mp_tf1_outpost_207_StoryRemote_Init()
+{
+ AddCallback_OnRegisteringCustomNetworkVars(TF1Port_mp_tf1_outpost_207_StoryRegisterRemote)
+}
+
+void function TF1Port_mp_tf1_outpost_207_StoryRegisterRemote()
+{
+ Remote_RegisterFunction("ServerCallback_TF1Story_Stage")
+ Remote_RegisterFunction("ServerCallback_TF1Story_Decoy")
+ Remote_RegisterFunction("ServerCallback_TF1Story_Prepare")
+ Remote_RegisterFunction("ServerCallback_TF1OutpostConversation")
+ Remote_RegisterFunction("ServerCallback_TF1OutpostOutcome")
+ Remote_RegisterFunction("ServerCallback_TF1OutpostWarpArrival")
+
+}
