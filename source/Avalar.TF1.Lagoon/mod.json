@@ -1,6 +1,6 @@
 {
   "Name": "Avalar.TF1.Lagoon",
-  "Version": "1.0.4",
+  "Version": "1.0.5",
   "LoadPriority": 200,
   "RequiredOnClient": true,
   "Description": "Titanfall 1 port of the map Lagoon in Titanfall 2",
@@ -38,14 +38,6 @@
       }
     },
     {
-      "Path": "sv_mp_tf1_lagoon_scenery.nut",
-      "RunOn": "SERVER && MP",
-      "ServerCallback": {
-        "Before": "TF1Port_mp_tf1_lagoon_Scenery_Precache",
-        "After": "TF1Port_mp_tf1_lagoon_Scenery_Init"
-      }
-    },
-    {
       "Path": "sv_mp_tf1_lagoon_fastball.nut",
       "RunOn": "SERVER && MP",
       "ServerCallback": {
@@ -73,6 +65,15 @@
       "ClientCallback": {
         "After": "TF1Port_mp_tf1_lagoon_AudioInit",
         "Destroy": "TF1Port_mp_tf1_lagoon_AudioShutdown"
+      }
+    },
+    {
+      "Path": "cl_mp_tf1_lagoon_straton.nut",
+      "RunOn": "CLIENT && MP",
+      "ClientCallback": {
+        "Before": "TF1LagoonStraton_Precache",
+        "After": "TF1LagoonStraton_Init",
+        "Destroy": "TF1LagoonStraton_Shutdown"
       }
     }
   ],

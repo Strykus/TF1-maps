@@ -23,9 +23,14 @@ Console map name: `mp_tf1_lagoon`
 | `ttdm` | Titan Team Deathmatch |
 | `fastball` | Fastball |
 
-## Optional plugin
+## 1.0.5
 
-[TF1AudioRuntime.dll](https://github.com/Strykus/TF1-maps/blob/main/plugins/TF1AudioRuntime.dll) adds restored map audio. [TF1ShaderRuntime.dll](https://github.com/Strykus/TF1-maps/blob/main/plugins/TF1ShaderRuntime.dll) adds underwater shader fix. The map can load without it.
+- Fixed black squares and bright flashes near the waterline.
+- Fixed Straton aircraft disappearing when viewed from certain angles and removed the magenta duplicate.
+- The water fixes are built into the map package.
 
+## Optional audio plugin
+
+[TF1AudioRuntime.dll](https://github.com/Strykus/TF1-maps/blob/main/plugins/TF1AudioRuntime.dll) adds restored map audio.
 
 [TF1 Maps project](https://github.com/Strykus/TF1-maps)
