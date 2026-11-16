@@ -1,0 +1,58 @@
+name: Publish Airbase and Overlook 1.0.1
+on:
+  push:
+    branches: ['codex/airbase-overlook-1.0.1-release']
+    paths: ['.github/workflows/publish-airbase-overlook-101.yml']
+permissions:
+  contents: write
+concurrency:
+  group: airbase-overlook-release-1.0.1
+jobs:
+  release:
+    if: github.repository == 'Strykus/TF1-maps'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 18
+    env:
+      GH_REPO: Strykus/TF1-maps
+      SOURCE_COMMIT: 73edb9dd8530ff04360b539acd9cf8a2a7b34d04
+      AIRBASE_SHA256: ba9290d83a722c310997c9ae171416f2009a68fe82cfd06a27b079d0e19a1c75
+      OVERLOOK_SHA256: a1b80814f99a2b7cde58f9ff53bfd5e5798bb509eb235a0dc939d92aa576025f
+    steps:
+      - name: Download and verify both Thunderstore ZIPs
+        shell: bash
+        run: |
+          verify() {
+            local archive="$1" size="$2" checksum="$3"
+            curl --fail --location --silent --show-error --retry 3 --max-time 480 \
+              --output "$archive" "https://gcdn.thunderstore.io/live/repository/packages/$archive"
+            test "$(stat --format=%s "$archive")" = "$size"
+            printf '%s  %s\n' "$checksum" "$archive" | sha256sum --check --strict
+          }
+          verify Avalar-TF1_Airbase-1.0.1.zip 1350384518 "$AIRBASE_SHA256"
+          verify Avalar-TF1_Overlook-1.0.1.zip 1676925170 "$OVERLOOK_SHA256"
+      - name: Publish the matching archives as GitHub release assets
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          airbase=Avalar-TF1_Airbase-1.0.1.zip
+          overlook=Avalar-TF1_Overlook-1.0.1.zip
+          gh release create 1.0.1 "$airbase" "$overlook" --draft --latest=false \
+            --target "$SOURCE_COMMIT" --title 'TF1 Airbase and Overlook 1.0.1' \
+            --notes '## Airbase
+          - Fixed turret panel initialization and data knife events.
+          - Extended forklift visibility to all 13 placements and updated selected collisions.
+
+          ## Overlook
+          - Updated Hornet and Straton flights, textures, and exhaust effects.
+          - Fixed the hatch and other prop collisions, and retained the detailed cargo cage model.
+
+          Both ZIPs match the packages published on Thunderstore.'
+          gh api --paginate 'repos/Strykus/TF1-maps/releases?per_page=100' \
+            | jq -e --arg airbase "$airbase" --arg overlook "$overlook" \
+                --arg asha "sha256:$AIRBASE_SHA256" --arg osha "sha256:$OVERLOOK_SHA256" \
+                '[.[] | select(.tag_name == "1.0.1" and .draft) | .assets[] | select(.state == "uploaded")] |
+                 length == 2 and
+                 any(.[]; .name == $airbase and .size == 1350384518 and .digest == $asha) and
+                 any(.[]; .name == $overlook and .size == 1676925170 and .digest == $osha)' > /dev/null
+          gh release edit 1.0.1 --draft=false --latest=false
