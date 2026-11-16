@@ -25,8 +25,9 @@ Console map name: `mp_tf1_runoff`
 | `ttdm` | Titan Team Deathmatch |
 | `fastball` | Fastball |
 
-## Optional plugin
+## 1.0.1
 
-[TF1ShaderRuntime.dll](https://github.com/Strykus/TF1-maps/blob/main/plugins/0-TF1ShaderRuntime.dll) adds underwater shader fix. The map can load without it.
+- Fixed bright flashes near the waterline and guarded the underwater fog shader.
+- The water fixes are built into the map package.
 
 [TF1 Maps project](https://github.com/Strykus/TF1-maps)
