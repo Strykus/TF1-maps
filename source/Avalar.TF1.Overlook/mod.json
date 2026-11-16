@@ -1,6 +1,6 @@
 {
   "Name": "Avalar.TF1.Overlook",
-  "Version": "1.0.0",
+  "Version": "1.0.1",
   "LoadPriority": 200,
   "RequiredOnClient": true,
   "Description": "Titanfall 1 port of the map Overlook in Titanfall 2",

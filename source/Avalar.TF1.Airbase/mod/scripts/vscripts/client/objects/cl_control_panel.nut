@@ -42,9 +42,19 @@ function ServerCallback_ControlPanelRefresh( panelEHandle )
 	ControlPanelRefresh( panel )
 }
 
+bool function IsSupportedControlPanel( entity panel )
+{
+	asset model = panel.GetModelName()
+	if ( model == $"models/communication/terminal_usable_imc_01.mdl" )
+		return true
+
+	// Airbase's port keeps the panel attachments and knife events under a map-local model path.
+	return GetMapName() == "mp_tf1_airbase" && model == $"models/tf1_mapcache/mp_tf1_airbase/2ad36862bffcb1886b42.mdl"
+}
+
 void function CreateCallback_Panel( entity panel )
 {
-	if ( panel.GetModelName() != $"models/communication/terminal_usable_imc_01.mdl" )
+	if ( !IsSupportedControlPanel( panel ) )
 		return
 
 	ControlPanelInit( panel )
@@ -55,7 +65,7 @@ void function CreateCallback_Panel( entity panel )
 
 void function DestroyCallback_Panel( entity panel )
 {
-	if ( panel.GetModelName() != $"models/communication/terminal_usable_imc_01.mdl" )
+	if ( !IsSupportedControlPanel( panel ) )
 		return
 
 	if ( "HudVGUI" in panel.s && panel.s.HudVGUI )
@@ -138,7 +148,7 @@ void function DestroyCallback_PanelTarget( entity ent )
 
 function ControlPanelRefresh( panel )
 {
-	if ( !IsValid( panel ) )
+	if ( !IsValid( panel ) || !( "initiated" in panel.s ) )
 		return
 
 	foreach ( func in panel.s.updateCallbacks )

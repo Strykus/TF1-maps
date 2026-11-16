@@ -1,0 +1,13 @@
+"spritecard"
+{
+	"$basetexture" "tf1_port/mp_tf1_haven_jets/particle/glows/glow_soft_linear"
+//	$additive 1
+	"$additive" "1"
+	$muloutputbyalpha 1
+
+	$depthblend 0
+
+	$ignorez 1
+
+
+}
