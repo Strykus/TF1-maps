@@ -1,87 +1,87 @@
 {
-  "Name": "Avalar.TF1.Nexus",
-  "Version": "1.0.0",
-  "LoadPriority": 200,
-  "Dependencies": {
-    "TF1_NS_CUSTOM": "Northstar.Custom"
-  },
-  "RequiredOnClient": true,
-  "Description": "Titanfall 1 port of the map Nexus in Titanfall 2",
-  "Scripts": [
-    {
-      "Path": "lobby/sh_mp_tf1_nexus.gnut",
-      "RunOn": "( CLIENT || SERVER ) && MP",
-      "ClientCallback": {
-        "Before": "TF1Nexus_Init"
-      },
-      "ServerCallback": {
-        "Before": "TF1Nexus_Init"
-      }
+    "Name": "Avalar.TF1.Nexus",
+    "Version": "1.0.1",
+    "LoadPriority": 200,
+    "Dependencies": {
+        "TF1_NS_CUSTOM": "Northstar.Custom"
     },
-    {
-      "Path": "sv_mp_tf1_nexus_ctf_flags.nut",
-      "RunOn": "SERVER && MP",
-      "ServerCallback": {
-        "After": "TF1Nexus_CTFFlags_Init"
-      }
-    },
-    {
-      "Path": "cl_mp_tf1_nexus_lighting.nut",
-      "RunOn": "CLIENT && MP",
-      "ClientCallback": {
-        "After": "TF1Port_mp_tf1_nexus_Init",
-        "Destroy": "TF1Port_mp_tf1_nexus_Shutdown"
-      }
-    },
-    {
-      "Path": "cl_mp_tf1_nexus_audio.nut",
-      "RunOn": "CLIENT && MP",
-      "ClientCallback": {
-        "After": "TF1Port_mp_tf1_nexus_AudioInit",
-        "Destroy": "TF1Port_mp_tf1_nexus_AudioShutdown"
-      }
-    },
-    {
-      "Path": "sv_mp_tf1_nexus_lifecycle.nut",
-      "RunOn": "SERVER && MP",
-      "ServerCallback": {
-        "After": "TF1Port_mp_tf1_nexus_ServerInit"
-      }
-    },
-    {
-      "Path": "sv_mp_tf1_nexus_turrets.nut",
-      "RunOn": "SERVER && MP",
-      "ServerCallback": {
-        "Before": "TF1Port_mp_tf1_nexus_Turrets_Precache",
-        "After": "TF1Port_mp_tf1_nexus_Turrets_Init"
-      }
-    },
-    {
-      "Path": "sv_mp_tf1_nexus_fastball.nut",
-      "RunOn": "SERVER && MP",
-      "ServerCallback": {
-        "After": "TF1Port_mp_tf1_nexus_Fastball_Init"
-      }
-    },
-    {
-      "Path": "sv_mp_tf1_nexus_evac.nut",
-      "RunOn": "SERVER && MP",
-      "ServerCallback": {
-        "After": "TF1Evac_mp_tf1_nexus_Init"
-      }
-    },
-    {
-      "Path": "cl_tf1_nexus_panel.nut",
-      "RunOn": "CLIENT && MP",
-      "ClientCallback": {
-        "After": "TF1NexusPanel_Init"
-      }
-    }
-  ],
-  "Localisation": [
-    "resource/names_mp_tf1_nexus_%language%.txt"
-  ],
-  "PluginDependencies": [
-    "TF1AudioRuntime"
-  ]
+    "RequiredOnClient": true,
+    "Description": "Titanfall 1 port of the map Nexus in Titanfall 2",
+    "Scripts": [
+        {
+            "Path": "lobby/sh_mp_tf1_nexus.gnut",
+            "RunOn": "( CLIENT || SERVER ) && MP",
+            "ClientCallback": {
+                "Before": "TF1Nexus_Init"
+            },
+            "ServerCallback": {
+                "Before": "TF1Nexus_Init"
+            }
+        },
+        {
+            "Path": "sv_mp_tf1_nexus_ctf_flags.nut",
+            "RunOn": "SERVER && MP",
+            "ServerCallback": {
+                "After": "TF1Nexus_CTFFlags_Init"
+            }
+        },
+        {
+            "Path": "cl_mp_tf1_nexus_lighting.nut",
+            "RunOn": "CLIENT && MP",
+            "ClientCallback": {
+                "After": "TF1Port_mp_tf1_nexus_Init",
+                "Destroy": "TF1Port_mp_tf1_nexus_Shutdown"
+            }
+        },
+        {
+            "Path": "cl_mp_tf1_nexus_audio.nut",
+            "RunOn": "CLIENT && MP",
+            "ClientCallback": {
+                "After": "TF1Port_mp_tf1_nexus_AudioInit",
+                "Destroy": "TF1Port_mp_tf1_nexus_AudioShutdown"
+            }
+        },
+        {
+            "Path": "sv_mp_tf1_nexus_lifecycle.nut",
+            "RunOn": "SERVER && MP",
+            "ServerCallback": {
+                "After": "TF1Port_mp_tf1_nexus_ServerInit"
+            }
+        },
+        {
+            "Path": "sv_mp_tf1_nexus_turrets.nut",
+            "RunOn": "SERVER && MP",
+            "ServerCallback": {
+                "Before": "TF1Port_mp_tf1_nexus_Turrets_Precache",
+                "After": "TF1Port_mp_tf1_nexus_Turrets_Init"
+            }
+        },
+        {
+            "Path": "sv_mp_tf1_nexus_fastball.nut",
+            "RunOn": "SERVER && MP",
+            "ServerCallback": {
+                "After": "TF1Port_mp_tf1_nexus_Fastball_Init"
+            }
+        },
+        {
+            "Path": "sv_mp_tf1_nexus_evac.nut",
+            "RunOn": "SERVER && MP",
+            "ServerCallback": {
+                "After": "TF1Evac_mp_tf1_nexus_Init"
+            }
+        },
+        {
+            "Path": "cl_tf1_nexus_panel.nut",
+            "RunOn": "CLIENT && MP",
+            "ClientCallback": {
+                "After": "TF1NexusPanel_Init"
+            }
+        }
+    ],
+    "Localisation": [
+        "resource/names_mp_tf1_nexus_%language%.txt"
+    ],
+    "PluginDependencies": [
+        "TF1AudioRuntime"
+    ]
 }

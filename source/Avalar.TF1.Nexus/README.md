@@ -30,3 +30,8 @@ Console map name: `mp_tf1_nexus`
 [TF1AudioRuntime.dll](https://github.com/Strykus/TF1-maps/blob/main/plugins/TF1AudioRuntime.dll) adds restored map audio. The map can load without it.
 
 [TF1 Maps project](https://github.com/Strykus/TF1-maps)
+
+## 1.0.1
+
+- Updated Titan navigation and streetlight collision.
+- Fixed lighting on a rooftop fan and an exposed rock.
