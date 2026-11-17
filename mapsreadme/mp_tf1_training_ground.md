@@ -1,7 +1,7 @@
 <h1 align="center">Avalar TF1 Training Ground</h1>
 <h3 align="center">Titanfall 1 port of the map Training Ground in Titanfall 2</h3>
 
-<img width="1920" height="1080" alt="mp_tf1_airbase" src="https://github.com/user-attachments/assets/b5a46538-4819-488a-ae54-35c5a067184b" />
+<img width="1920" height="1200" alt="Training Ground" src="https://github.com/user-attachments/assets/680dd404-dbb7-4c90-aceb-296a8b83a206" />
 
 Console map name: `mp_tf1_training_ground`
 
