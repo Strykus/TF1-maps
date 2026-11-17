@@ -1,7 +1,7 @@
 <h1 align="center">Avalar TF1 Haven</h1>
 <h3 align="center">Titanfall 1 port of the map Haven in Titanfall 2</h3>
 
-<img width="1920" height="1080" alt="mp_tf1_airbase" src="https://github.com/user-attachments/assets/b5a46538-4819-488a-ae54-35c5a067184b" />
+<img width="1280" height="720" alt="Haven" src="https://github.com/user-attachments/assets/6a1028f6-6355-44af-b429-e41492264741" />
 
 Console map name: `mp_tf1_haven`
 
