@@ -3,7 +3,7 @@
 
 <img width="1920" height="1080" alt="mp_tf1_zone_180003" src="https://github.com/user-attachments/assets/8c734ec7-90b9-475c-ab45-09df07ae6389" />
 
-Console map name: `mp_tf1_harmony_mines`
+Console map name: `mp_tf1_zone_18`
 
 <h1 align="center">Supported modes</h1>
 
