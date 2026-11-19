@@ -3,7 +3,7 @@
 
 <img width="1920" height="1200" alt="TF1-Dig-Site" src="https://github.com/user-attachments/assets/76509b1e-d489-48f1-911c-23a818985f89" />
 
-Console map name: `mp_tf1_airbase`
+Console map name: `mp_tf1_harmony_mines`
 
 <h1 align="center">Supported modes</h1>
 
