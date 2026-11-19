@@ -1,0 +1,29 @@
+<h1 align="center">Avalar TF1 Zone 18</h1>
+<h3 align="center">Titanfall 1 port of the map Zone 18 in Titanfall 2</h3>
+
+<img width="1920" height="1080" alt="mp_tf1_zone_180003" src="https://github.com/user-attachments/assets/8c734ec7-90b9-475c-ab45-09df07ae6389" />
+
+Console map name: `mp_tf1_harmony_mines`
+
+<h1 align="center">Supported modes</h1>
+
+<div align="center">
+
+
+| Playlist ID | Gamemode |
+| :---: | :---: |
+| `tdm` | Team Deathmatch |
+| `aitdm` | Attrition |
+| `cp` | Hardpoint |
+| `at` | Bounty Hunt |
+| `ctf` | Capture the Flag |
+| `lts` | Last Titan Standing |
+| `ps` | Pilot Skirmish |
+| `speedball` | Speedball |
+| `mfd` | Marked for Death |
+| `ttdm` | Titan Team Deathmatch |
+| `fastball` | Fastball |
+
+
+
+[TF1 Maps project](https://github.com/Strykus/TF1-maps)
