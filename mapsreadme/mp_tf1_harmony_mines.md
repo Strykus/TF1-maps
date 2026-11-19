@@ -1,5 +1,5 @@
-<h1 align="center">Avalar TF1 Airbase</h1>
-<h3 align="center">Titanfall 1 port of the map Airbase in Titanfall 2</h3>
+<h1 align="center">Avalar TF1 Dig Site</h1>
+<h3 align="center">Titanfall 1 port of the map Dig Site in Titanfall 2</h3>
 
 <img width="1920" height="1200" alt="TF1-Dig-Site" src="https://github.com/user-attachments/assets/76509b1e-d489-48f1-911c-23a818985f89" />
 
