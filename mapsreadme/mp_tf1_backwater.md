@@ -21,6 +21,5 @@ Console map name: `mp_tf1_backwater`
 | `speedball` | Speedball |
 | `mfd` | Marked for Death |
 | `ttdm` | Titan Team Deathmatch |
-| `fastball` | Fastball |
 
 [TF1 Maps project](https://github.com/Strykus/TF1-maps)
