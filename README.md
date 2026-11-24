@@ -19,19 +19,19 @@ This project documents 19 multiplayer maps(10 Currently) from the original **Tit
 - [Nexus](mapsreadme/mp_tf1_nexus.md)
 - [Outpost 207](mapsreadme/mp_tf1_outpost_207.md)
 - [Overlook](mapsreadme/mp_tf1_overlook.md)
-- Training Ground
+- [Training Ground](mapsreadme/mp_tf1_training_ground.md)
 
 ### DLC maps
 
 - Backwater
-- Dig Site
+- [Dig Site](mapsreadme/mp_tf1_harmony_mines.md)
 - [Export](mapsreadme/mp_tf1_switchback.md)
-- Haven
+- [Haven](mapsreadme/mp_tf1_haven.md)
 - [Runoff](mapsreadme/mp_tf1_runoff.md)
 - [Sandtrap](mapsreadme/mp_tf1_sandtrap.md)
-- Smuggler's Cove
+- [Smuggler's Cove](mapsreadme/mp_tf1_smuggle_cove.md)
 - [Swampland](mapsreadme/mp_tf1_swampland.md)
-- Zone 18
+- [Zone 18](mapsreadme/mp_tf1_zone_18.md)
 
 
 ## Supported Game modes
