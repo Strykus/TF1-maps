@@ -2,7 +2,7 @@
 <h3 align="center">Titanfall 1 port of the map Demeter in Titanfall 2</h3>
 
 
-Console map name: `mp_o2`
+Console map name: `mp_tf1_o2`
 
 <h1 align="center">Supported modes</h1>
 
