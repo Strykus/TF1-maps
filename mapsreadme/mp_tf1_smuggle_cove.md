@@ -1,7 +1,7 @@
 <h1 align="center">Avalar TF1 Smuggle Cove</h1>
 <h3 align="center">Titanfall 1 port of the map Smuggle Cove in Titanfall 2</h3>
 
-
+<img width="1920" height="1200" alt="Smugglers-Cove" src="https://github.com/user-attachments/assets/e7fe3b83-dbd9-47e2-9d72-8085bb35f4d6" />
 
 Console map name: `mp_tf1_smuggle_cove`
 
@@ -22,7 +22,7 @@ Console map name: `mp_tf1_smuggle_cove`
 | `speedball` | Speedball |
 | `mfd` | Marked for Death |
 | `ttdm` | Titan Team Deathmatch |
-| `fastball` | Fastball |
+
 
 
 
