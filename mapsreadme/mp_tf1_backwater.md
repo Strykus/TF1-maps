@@ -1,8 +1,9 @@
 <h1 align="center">Avalar TF1 Backwater</h1>
 <h3 align="center">Titanfall 1 port of the map Backwater in Titanfall 2</h3>
 
+<img width="1920" height="1080" alt="mp_tf1_backwater" src="https://github.com/user-attachments/assets/bdc91a19-0ecb-440d-bf96-e114c42e859c" />
 
-Console map name: `mp_backwater`
+Console map name: `mp_tf1_backwater`
 
 <h1 align="center">Supported modes</h1>
 
