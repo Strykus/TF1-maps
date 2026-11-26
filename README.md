@@ -12,7 +12,7 @@ This project documents 19 multiplayer maps(10 Currently) from the original **Tit
 
 - [Airbase](mapsreadme/mp_tf1_airbase.md)
 - Boneyard
-- Corporate
+- [Corporate](mapsreadme/mp_tf1_corporate.md)
 - Demeter
 - [Fracture](mapsreadme/mp_tf1_fracture.md)
 - [Lagoon](mapsreadme/mp_tf1_lagoon.md)
@@ -23,7 +23,7 @@ This project documents 19 multiplayer maps(10 Currently) from the original **Tit
 
 ### DLC maps
 
-- Backwater
+- [Backwater](mapsreadme/mp_tf1_backwater.md)
 - [Dig Site](mapsreadme/mp_tf1_harmony_mines.md)
 - [Export](mapsreadme/mp_tf1_switchback.md)
 - [Haven](mapsreadme/mp_tf1_haven.md)
