@@ -13,7 +13,7 @@ This project documents 19 multiplayer maps(10 Currently) from the original **Tit
 - [Airbase](mapsreadme/mp_tf1_airbase.md)
 - Boneyard
 - [Corporate](mapsreadme/mp_tf1_corporate.md)
-- Demeter
+- [Demeter](mapsreadme/mp_tf1_o2.md)
 - [Fracture](mapsreadme/mp_tf1_fracture.md)
 - [Lagoon](mapsreadme/mp_tf1_lagoon.md)
 - [Nexus](mapsreadme/mp_tf1_nexus.md)
