@@ -22,7 +22,6 @@ Console map name: `mp_tf1_boneyard`
 | `speedball` | Speedball |
 | `mfd` | Marked for Death |
 | `ttdm` | Titan Team Deathmatch |
-| `fastball` | Fastball |
 
 
 
