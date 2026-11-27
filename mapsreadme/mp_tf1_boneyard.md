@@ -1,7 +1,7 @@
 <h1 align="center">Avalar TF1 Boneyard</h1>
 <h3 align="center">Titanfall 1 port of the map Boneyard in Titanfall 2</h3>
 
-
+<img width="1920" height="1080" alt="mp_tf1_boneyard" src="https://github.com/user-attachments/assets/3e4cc857-4f2e-4032-b4d4-3c4fdb63d1f8" />
 
 Console map name: `mp_tf1_boneyard`
 
