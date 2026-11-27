@@ -1,7 +1,7 @@
 <h1 align="center">TF1 Maps</h1>
 <h3 align="center">Titanfall 1 maps not included in Titanfall 2</h3>
 
-This project documents 19 multiplayer maps(10 Currently) from the original **Titanfall** that are not included in **Titanfall 2**. Each map has its own README under `mapsreadme/`.
+This project documents 19 multiplayer maps from the original **Titanfall** that are not included in **Titanfall 2**. Each map has its own README under `mapsreadme/`.
 
 <img width="1920" height="1080" alt="photo-collage png(1)" src="https://github.com/user-attachments/assets/00a6b69c-cf06-4039-b54d-7fe286c57c86" />
 
