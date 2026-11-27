@@ -3,7 +3,7 @@
 
 This project documents 19 multiplayer maps(10 Currently) from the original **Titanfall** that are not included in **Titanfall 2**. Each map has its own README under `mapsreadme/`.
 
-<img width="1920" height="1080" alt="photo-collage png" src="https://github.com/user-attachments/assets/d3699ae6-f9d5-4bf2-b6bb-bb32649b07e6" />
+<img width="1920" height="1080" alt="photo-collage png(1)" src="https://github.com/user-attachments/assets/00a6b69c-cf06-4039-b54d-7fe286c57c86" />
 
 
 ## Maps
