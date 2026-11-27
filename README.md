@@ -36,7 +36,7 @@ This project documents 19 multiplayer maps from the original **Titanfall** that 
 
 ## Supported Game modes
 
-`Overlook, Zone 18, Backwater, Smuggler's Cove` Not supporting `Fastball` gamemode
+`Overlook, Zone 18, Backwater, Smuggler's Cove, Boneyard` Not supporting `Fastball` gamemode
 
 The IDs are the names used in the playlist configuration. The names after are ingame mode names.
 
